@@ -1,0 +1,59 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		 
+        <form class="well form-search" method="post" action="{:U('Surveycharts/search')}">
+            用户名:s
+            <select id="">
+            	<option>2</option>
+            	<option>43</option>
+            </select>
+            邮箱:
+            <select id="">
+            	<option>2</option>
+            	<option>43</option>
+            </select><br>
+            邮箱:
+            <select id="">
+            	<option>2</option>
+            	<option>43</option>
+            </select>
+            <input type="submit" class="btn btn-primary" value="搜索" />
+            <!-- <a class="btn btn-danger" href="{:U('User/index')}">清空</a> -->
+        </form>
+ 
+ 
+      
+ 
+    <body>
+        <div id="chartContainer"></div>
+ 
+        
+    
+	</div>
+	  <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+	
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script type="text/javascript">
+ 
+            $(function () {
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    theme: "theme2",
+                    animationEnabled: true,
+                    title: {
+                        text: "提问问题"
+                    },
+                    data: [
+                    {
+                        type: "column",                
+                        dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+                    }
+                    ]
+                });
+                chart.render();
+            });
+        </script>
+</body>
+</html>
