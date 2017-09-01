@@ -1,0 +1,186 @@
+[ 2017-09-01T14:19:39+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=up&suv=1&radioid=5&number=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000591s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001563s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000590s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000642s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 3,5   [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_radio` SET `orders`='5' WHERE `radioid` = 4 [ RunTime:0.0025s ]
+SQL: UPDATE `cmf_radio` SET `orders`='4' WHERE `radioid` = 5 [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2017-09-01T14:19:41+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=up&suv=1&radioid=6&number=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000642s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001609s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000663s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 4,6   [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_radio` SET `orders`='6' WHERE `radioid` = 4 [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_radio` SET `orders`='5' WHERE `radioid` = 6 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-09-01T14:19:42+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=down&suv=1&radioid=6&number=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000581s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001642s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000658s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: radio /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Admin/Controller/SurveylistController.class.php 第 278 行.
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 4,6   [ RunTime:0.0003s ]
+SQL: UPDATE `cmf_radio` SET `orders`='6' WHERE `radioid` = 6 [ RunTime:0.0009s ]
+SQL: UPDATE `cmf_radio` SET `orders`='5' WHERE `radioid` = 4 [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-09-01T14:19:50+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=down&suv=1&radioid=4&number=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000944s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002323s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000705s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: radio /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Admin/Controller/SurveylistController.class.php 第 278 行.
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 4,6   [ RunTime:0.0003s ]
+SQL: UPDATE `cmf_radio` SET `orders`='6' WHERE `radioid` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `cmf_radio` SET `orders`='5' WHERE `radioid` = 6 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2017-09-01T14:19:51+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=up&suv=1&radioid=6&number=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001057s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002171s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000597s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 3,5   [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_radio` SET `orders`='5' WHERE `radioid` = 5 [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_radio` SET `orders`='4' WHERE `radioid` = 6 [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2017-09-01T14:19:52+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=up&suv=1&radioid=6&number=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000690s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001760s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000713s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 2,4   [ RunTime:0.0003s ]
+SQL: UPDATE `cmf_radio` SET `orders`='4' WHERE `radioid` = 3 [ RunTime:0.0003s ]
+SQL: UPDATE `cmf_radio` SET `orders`='3' WHERE `radioid` = 6 [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2017-09-01T14:19:53+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=up&suv=1&radioid=6&number=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000595s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001621s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000576s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 1,3   [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_radio` SET `orders`='3' WHERE `radioid` = 2 [ RunTime:0.0003s ]
+SQL: UPDATE `cmf_radio` SET `orders`='2' WHERE `radioid` = 6 [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2017-09-01T14:19:53+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=up&suv=1&radioid=6&number=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000583s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001516s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000610s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_survey` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_radio` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_question` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyrecord` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cmf_surveyradiorecord` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_radio` WHERE `surveyid` = 1 AND `status` = 1 ORDER BY orders asc LIMIT 0,2   [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_radio` SET `orders`='2' WHERE `radioid` = 1 [ RunTime:0.0003s ]
+SQL: UPDATE `cmf_radio` SET `orders`='1' WHERE `radioid` = 6 [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+

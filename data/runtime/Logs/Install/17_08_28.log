@@ -1,0 +1,9 @@
+[ 2017-08-28T14:09:12+08:00 ] ::1 /ThinkCMF/index.php?g=install&a=testdbpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000714s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002126s ]
+NOTIC: [8] Undefined index: db_name /Users/zhangyuxing/Documents/zhangyuxing/ThinkCMF/simplewind/Core/Library/Think/Db.class.php 第 68 行.
+SQL: show databases; [ RunTime:0.0022s ]
+

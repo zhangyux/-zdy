@@ -1,0 +1,295 @@
+[ 2017-08-28T14:14:53+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000923s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002068s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000623s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000677s ]
+
+[ 2017-08-28T14:14:59+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000594s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001516s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000635s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `cmf_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_role_user` [ RunTime:0.0009s ]
+SQL: SELECT `role_id` FROM cmf_role_user a INNER JOIN cmf_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0003s ]
+SQL: UPDATE `cmf_users` SET `user_login`='admin',`user_pass`='###0efbd9558c7bb9ebe42351397554a47e',`user_nicename`='admin',`user_email`='2449028906@163.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='0.0.0.0',`last_login_time`='2017-08-28 14:14:59',`create_time`='2017-08-28 02:09:45',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0007s ]
+
+[ 2017-08-28T14:29:14+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T14:29:17+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=menu&a=add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T14:30:29+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000675s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001596s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000864s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0008s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `cmf_auth_rule` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: validate /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' AND `model` = 'Survey' AND `action` = 'defuault' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `parentid` FROM `cmf_menu` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: auto /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `cmf_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('0','电子校牌问卷','Admin','Survey','defuault','','','','1','1') [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_auth_rule` WHERE `name` = 'admin/survey/defuault' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `cmf_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/survey/defuault','Admin','admin_url','电子校牌问卷') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0014s ]
+
+[ 2017-08-28T14:30:29+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T14:30:37+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T14:30:41+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=menu&a=add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T14:31:21+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000695s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001642s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001087s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0008s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `cmf_auth_rule` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: validate /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' AND `model` = 'Surveyadd' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `parentid` FROM `cmf_menu` WHERE `id` = 187 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: auto /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `cmf_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('187','添加问卷','Admin','Surveyadd','index','','','','1','1') [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_auth_rule` WHERE `name` = 'admin/surveyadd/index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `cmf_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/surveyadd/index','Admin','admin_url','添加问卷') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0014s ]
+NOTIC: [2] mkdir(): File exists /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Admin/Controller/MenuController.class.php 第 247 行.
+
+[ 2017-08-28T14:31:22+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T14:32:49+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveyadd&a=index
+ERR: 模板不存在:admin/themes/simplebootx/Admin/Surveyadd/index.html
+
+[ 2017-08-28T16:29:31+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T16:29:35+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=menu&a=add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T16:30:44+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000686s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001612s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000669s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0007s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `cmf_auth_rule` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: validate /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' AND `model` = 'Surveycharts' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `parentid` FROM `cmf_menu` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: auto /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `cmf_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('0','查看图形统计','Admin','Surveycharts','index','','','','1','1') [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_auth_rule` WHERE `name` = 'admin/surveycharts/index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `cmf_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/surveycharts/index','Admin','admin_url','查看图形统计') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0011s ]
+NOTIC: [2] mkdir(): File exists /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Admin/Controller/MenuController.class.php 第 247 行.
+
+[ 2017-08-28T16:30:44+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T16:45:33+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T16:45:35+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T16:45:40+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T16:45:47+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=edit&id=189&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T16:45:57+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000671s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001620s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000717s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0011s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `cmf_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: validate /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT `id` FROM `cmf_menu` WHERE `app` = 'Admin' AND `model` = 'Surveycharts' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: auto /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `cmf_menu` SET `parentid`='187',`name`='查看图形统计',`app`='Admin',`model`='Surveycharts',`action`='index',`data`='',`icon`='',`remark`='',`status`='1',`type`='1' WHERE `id` = 189 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_auth_rule` WHERE `name` = 'admin/surveycharts/index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_auth_rule` SET `name`='admin/surveycharts/index',`module`='Admin',`type`='admin_url',`title`='查看图形统计' WHERE `name` = 'admin/surveycharts/index' [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0009s ]
+NOTIC: [2] mkdir(): File exists /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Admin/Controller/MenuController.class.php 第 247 行.
+
+[ 2017-08-28T16:45:57+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=edit&id=189&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T17:25:25+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T20:46:37+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:46:39+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=menu&a=add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:47:31+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T20:47:34+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T20:47:47+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:47:50+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=menu&a=add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:48:11+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000708s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001721s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000691s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000751s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0014s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `cmf_auth_rule` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: validate /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' AND `model` = 'Surveylist' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `parentid` FROM `cmf_menu` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: auto /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `cmf_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('0','查看统计','Admin','Surveylist','index','','','','1','1') [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_auth_rule` WHERE `name` = 'admin/surveylist/index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `cmf_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/surveylist/index','Admin','admin_url','查看统计') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0013s ]
+NOTIC: [2] mkdir(): File exists /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Admin/Controller/MenuController.class.php 第 247 行.
+
+[ 2017-08-28T20:48:11+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:48:17+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T20:48:18+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T20:48:21+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:48:32+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=edit&id=190&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:48:38+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000668s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001630s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000705s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `cmf_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_menu` [ RunTime:0.0007s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `cmf_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `id` = 190 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: validate /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT `id` FROM `cmf_menu` WHERE `app` = 'Admin' AND `model` = 'Surveylist' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: auto /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `cmf_menu` SET `parentid`='187',`name`='查看统计',`app`='Admin',`model`='Surveylist',`action`='index',`data`='',`icon`='',`remark`='',`status`='1',`type`='1' WHERE `id` = 190 [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cmf_auth_rule` WHERE `name` = 'admin/surveylist/index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `cmf_auth_rule` SET `name`='admin/surveylist/index',`module`='Admin',`type`='admin_url',`title`='查看统计' WHERE `name` = 'admin/surveylist/index' [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cmf_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0010s ]
+NOTIC: [2] mkdir(): File exists /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Admin/Controller/MenuController.class.php 第 247 行.
+
+[ 2017-08-28T20:48:38+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Menu&a=edit&id=190&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-08-28T20:51:30+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T20:52:02+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveycharts&a=index
+ERR: 无法加载控制器:Surveycharts
+
+[ 2017-08-28T20:54:05+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=index
+ERR: 无法加载控制器:Surveylist
+
+[ 2017-08-28T21:10:41+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=index
+ERR: 无法加载控制器:Surveylist
+
+[ 2017-08-28T21:11:26+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=index
+ERR: 无法加载控制器:Surveylist
+
+[ 2017-08-28T21:11:46+08:00 ] ::1 /thinkcmf/index.php?g=Admin&m=Surveylist&a=index
+ERR: 模板不存在:admin/themes/simplebootx/Admin/Surveylist/index.html
+
+[ 2017-08-28T22:14:07+08:00 ] ::1 /thinkcmf/index.php?g=admin&m=survey&a=add
+ERR: 无法加载控制器:Survey
+
+[ 2017-08-28T22:14:28+08:00 ] ::1 /thinkcmf/index.php?g=admin&m=survey&a=add
+ERR: 无法加载控制器:Survey
+
+[ 2017-08-28T22:16:32+08:00 ] ::1 /thinkcmf/index.php?g=admin&m=survey&a=add
+ERR: 无法加载控制器:Survey
+
+[ 2017-08-28T22:16:48+08:00 ] ::1 /thinkcmf/index.php?g=admin&m=survey&a=index
+ERR: 无法加载控制器:Survey
+
+[ 2017-08-28T22:17:05+08:00 ] ::1 /thinkcmf/index.php?g=admin&m=surveyadd&a=add
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''id' int(11) NOT NULL AUTO_INCREMENT,
+'name' char(200) DEFAULT NULL COMMENT '章' at line 2
+ [ SQL语句 ] : CREATE TABLE ’abc‘ (
+'id' int(11) NOT NULL AUTO_INCREMENT,
+'name' char(200) DEFAULT NULL COMMENT '章节名称',
+'contents' text COMMENT '章节文字',
+'next' int(11) DEFAULT NULL COMMENT '下一章地址',
+'pid' int(11) DEFAULT NULL COMMENT '小说名称',
+'novel_url' char(50) DEFAULT NULL COMMENT '小说章节地址',
+PRIMARY KEY ('id')
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;	
+

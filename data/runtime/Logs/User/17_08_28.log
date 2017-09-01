@@ -1,0 +1,48 @@
+[ 2017-08-28T14:09:51+08:00 ] ::1 /ThinkCMF/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000784s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001935s ]
+NOTIC: [8] Undefined index: url /Users/zhangyuxing/Documents/zhangyuxing/ThinkCMF/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2017-08-28T14:10:29+08:00 ] ::1 /thinkcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001354s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003032s ]
+NOTIC: [8] Undefined index: url /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2017-08-28T14:15:11+08:00 ] ::1 /thinkcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000518s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001485s ]
+NOTIC: [8] Undefined index: url /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2017-08-28T14:15:13+08:00 ] ::1 /thinkcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000560s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001730s ]
+NOTIC: [8] Undefined index: url /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2017-08-28T14:15:14+08:00 ] ::1 /ThinkCMF/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000850s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002192s ]
+NOTIC: [8] Undefined index: url /Users/zhangyuxing/Documents/zhangyuxing/ThinkCMF/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2017-08-28T14:15:15+08:00 ] ::1 /thinkcmf/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000750s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001905s ]
+NOTIC: [8] Undefined index: url /Users/zhangyuxing/Documents/zhangyuxing/thinkcmf/application/Common/Controller/AppframeController.class.php 第 22 行.
+
