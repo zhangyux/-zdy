@@ -143,7 +143,7 @@ right: initial !important;}
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<a href="<?php echo U('admin/index/index');?>" class="brand"> <small> 
-					ThinkCMF<?php echo L('ADMIN_CENTER');?>
+					电子校牌<?php echo L('ADMIN_CENTER');?>
 				</small>
 				</a>
 				<div class="pull-left nav_shortcuts" >

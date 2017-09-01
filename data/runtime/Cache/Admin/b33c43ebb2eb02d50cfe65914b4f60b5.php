@@ -93,7 +93,7 @@
 						<!-- <?php echo ($vo["question"]); ?> -->
 
 					</td><?php endforeach; endif; ?>
-					<?php $__FOR_START_880911602__=$vo["count"];$__FOR_END_880911602__=$countradio;for($i=$__FOR_START_880911602__;$i < $__FOR_END_880911602__;$i+=1){ ?><td> </td><?php } ?>
+					<?php $__FOR_START_879064808__=$vo["count"];$__FOR_END_879064808__=$countradio;for($i=$__FOR_START_879064808__;$i < $__FOR_END_879064808__;$i+=1){ ?><td> </td><?php } ?>
 					
 				 <td><?php echo ($vo["textare"]); ?></td>
 						
