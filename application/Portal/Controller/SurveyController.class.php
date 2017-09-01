@@ -27,12 +27,19 @@ class SurveyController extends AdminbaseController {
 	{
 		$surveyid = $_REQUEST['surveyid'];
 		$survey = $this->survey_model->where(array("surveyid"=>$surveyid))->find();		
-		$survey['radio'] = $this->radio_model->where(array("surveyid"=>$surveyid))->select();
+		$radiocounta = $this->radio_model->where(array("surveyid"=>$surveyid,'status'=>1))->order('orders asc')->select();	
+		$this->assign('radiocounta',$radiocounta);
+		
+
+		$survey['radio'] = $this->radio_model->where(array("surveyid"=>$surveyid,'status'=>1))->order('orders asc')->select();
 		 $addcounter = 0;
 		 $addnumber  = 0;
+		 $qsnu = 1;
 		foreach ($survey['radio'] as $key => $value) {
 			$survey['radio'][$key]['addcounter']=++$addcounter;
 			$survey['radio'][$key][$value['radioid']]=$this->question_model->where(array("radioid"=>$value['radioid']))->select();
+			 
+			 
 			 
 		}
 		$survey["addcounter"]=1;
@@ -60,7 +67,7 @@ class SurveyController extends AdminbaseController {
 	public function getradio()
 	{
 		$survey = $_REQUEST['surveyid'];
-		$radio = $this->radio_model->where(array('surveyid'=>$survey))->select();
+		$radio = $this->radio_model->where(array('surveyid'=>$survey,'status'=>1))->order('orders asc')->select();
 		foreach ($radio as $key => $value) {
 			$radio[$key]['question'] = $this->question_model->where(array('radioid'=>$value['radioid']))->select();
 		}
@@ -76,6 +83,7 @@ class SurveyController extends AdminbaseController {
 		$data['questionname'] = $_REQUEST['questionname'];
 		$data['radioname'] = $_REQUEST['radioname'];
 		$data['radiotag'] = $_REQUEST['radiotag'];
+		$data['local'] = $_REQUEST['local'];
 		$this->surveyradiorecord_model->add($data);
 
 	}
@@ -85,7 +93,7 @@ class SurveyController extends AdminbaseController {
 		$data['surveyid'] = $_REQUEST['surveyid'];
 		$data['radiotag'] = $_REQUEST['radiotag'];
 		$data['local'] = $_REQUEST['local'];
-		$data['textarea'] = $_REQUEST['textarea'];
+		$data['textare'] = $_REQUEST['textareas'];
 		$this->surveyrecord_model->add($data);
 		 
 	}

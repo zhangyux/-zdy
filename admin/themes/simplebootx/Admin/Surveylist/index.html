@@ -2,63 +2,72 @@
 </head>
 <body>
 	<div class="wrap js-check-wrap">
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="{:U('user/index')}">{:L('ADMIN_USER_INDEX')}</a></li>
-			<li><a href="{:U('user/add')}">{:L('ADMIN_USER_ADD')}</a></li>
-		</ul>
-        <form class="well form-search" method="post" action="{:U('User/index')}">
+		 <body>
+<if condition="$nowsurvey.title neq false">
+		 {$nowsurvey.title},分享链接:
+<label>http://zhangyuxing.com/thinkcmf/index.php?m=survey&a=index&surveyid={$nowsurvey.surveyid}</label>
+
+	</if>
+
+        <form class="well form-search" method="post" action="{:U('Surveylist/index')}">
             用户名:
-            <input type="text" name="user_login" style="width: 100px;" value="{:I('request.user_login/s','')}" placeholder="请输入{:L('USERNAME')}">
-            邮箱:
-            <input type="text" name="user_email" style="width: 100px;" value="{:I('request.user_email/s','')}" placeholder="请输入{:L('EMAIL')}">
-            <input type="submit" class="btn btn-primary" value="搜索" />
-            <a class="btn btn-danger" href="{:U('User/index')}">清空</a>
+             <select id="choosesurvey">
+             <foreach name="allsurvey" item="v">
+             	 	<option value="{$v.surveyid}">{$v.title}</option>
+	             	 
+             </foreach>
+             	
+             </select>
+          
+            <!-- <input type="submit" class="btn btn-primary" value="搜索" /> -->
+            <a class="btn btn-success" onclick="searchs()">搜索</a>
+            <a class="btn btn-primary" onclick="lists()">查看统计</a>
+            <a class="btn btn-inverse" onclick="add()">增加问题</a>
+            <a class="btn btn-danger" onclick="del()">删除问卷</a>
+             
         </form>
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
 					<th width="50">ID</th>
-					<th>{:L('USERNAME')}</th>
-					<th>{:L('LAST_LOGIN_IP')}</th>
-					<th>{:L('LAST_LOGIN_TIME')}</th>
-					<th>{:L('EMAIL')}</th>
-					<th>{:L('STATUS')}</th>
-					<th width="120">{:L('ACTIONS')}</th>
+					<th>题目</th>
+					<th>问题1</th>
+					<th>问题2</th>
+					<th>问题3</th>
+					<th>问题4</th>
+					<th width="120">{:L('EDIT')}</th>
 				</tr>
 			</thead>
 			<tbody>
-				<php>$user_statuses=array("0"=>L('USER_STATUS_BLOCKED'),"1"=>L('USER_STATUS_ACTIVATED'),"2"=>L('USER_STATUS_UNVERIFIED'));</php>
-				<foreach name="users" item="vo">
+				<!-- <php>$user_statuses=array("0"=>L('USER_STATUS_BLOCKED'),"1"=>L('USER_STATUS_ACTIVATED'),"2"=>L('USER_STATUS_UNVERIFIED'));</php> -->
+
+				<foreach name="surveylist" item="vo">
 				<tr>
-					<td>{$vo.id}</td>
-					<td><if condition="$vo['user_url']"><a href="{$vo.user_url}" target="_blank" title="{$vo.signature}">{$vo.user_login}</a><else />{$vo.user_login}</if></td>
-					<td>{$vo.last_login_ip}</td>
+					<td>{$vo.number}</td>
 					<td>
-						<if condition="$vo['last_login_time'] eq 0">
-							{:L('USER_HAVENOT_LOGIN')}
-						<else />
-							{$vo.last_login_time}
-						</if>
+						{$vo.radiotitle}
+						<!-- {$vo.question} -->
+
 					</td>
-					<td>{$vo.user_email}</td>
-					<td>{$user_statuses[$vo['user_status']]}</td>
+					<foreach name="vo['question']" item="qs">
+					<td>{$qs.questiontitle}</td>
+
+					</foreach>
+
+					
+					<if condition="$vo.count lt 4">
+					 <for start="$vo.count" end="4">
+					 	<td></td>
+					 </for>
+					</if>
+					
+					 
 					<td>
-						<if condition="$vo['id'] eq 1 || $vo['id'] eq sp_get_current_admin_id()">
-						<font color="#cccccc">{:L('EDIT')}</font> | <font color="#cccccc">{:L('DELETE')}</font> |
-							<if condition="$vo['user_status'] eq 1">
-								<font color="#cccccc">{:L('BLOCK_USER')}</font>
-							<else />
-								<font color="#cccccc">{:L('ACTIVATE_USER')}</font>
-							</if>
-						<else />
-							<a href='{:U("user/edit",array("id"=>$vo["id"]))}'>{:L('EDIT')}</a> |
-							<if condition="$vo['user_status'] eq 1">
-								<a href="{:U('user/ban',array('id'=>$vo['id']))}" class="js-ajax-dialog-btn" data-msg="{:L('BLOCK_USER_CONFIRM_MESSAGE')}">{:L('BLOCK_USER')}</a> | 
-							<else />
-								<a href="{:U('user/cancelban',array('id'=>$vo['id']))}" class="js-ajax-dialog-btn" data-msg="{:L('ACTIVATE_USER_CONFIRM_MESSAGE')}">{:L('ACTIVATE_USER')}</a> | 
-							</if>
-							<a class="js-ajax-delete" href="{:U('user/delete',array('id'=>$vo['id']))}">{:L('DELETE')}</a>
-						</if>
+						 
+								<a onclick="edit({$vo['radioid']})">编辑</a>  
+							 
+							|<a   href="#" onclick="delradio({$vo['radioid']})">{:L('DELETE')}</a>
+						 |<a   href="#" onclick="up({$vo['radioid']},{$vo.number})">上移</a>|<a   href="#" onclick="down({$vo['radioid']},{$vo.number})">下移</a>
 					</td>
 				</tr>
 				</foreach>
@@ -67,5 +76,104 @@
 		<div class="pagination">{$page}</div>
 	</div>
 	<script src="__PUBLIC__/js/common.js"></script>
+	<script src="__PUBLIC__/js/layer/layer.js"></script>
+	<script type="text/javascript">
+		function searchs()
+		{
+			 var suv = $("#choosesurvey").val(); 
+			window.location.href="{:U('Surveylist/index')}&survey="+suv;
+			 
+		 
+		}
+		function lists()
+		{
+			var suv = $("#choosesurvey").val(); 
+			window.location.href="{:U('Surveylist/lists')}&survey="+suv;
+			 
+		}
+		function edit(radioid){
+			layer.open({
+			  type: 2,
+			  area: ['700px', '450px'],
+			  fixed: false, //不固定
+			  maxmin: true,
+			  content: "{:U('Surveylist/edit')}&radioid="+radioid+""
+			});
+		}
+		function add()
+		{
+			 var suv =  "{$nowsurvey.surveyid}"; 
+
+
+			 layer.open({
+			  type: 2,
+			  area: ['700px', '450px'],
+			  fixed: false, //不固定
+			  maxmin: true,
+			  content: "{:U('Surveylist/add')}&suv="+suv+""
+			});
+
+
+			// if (confirm("是否需要增加问题")) {
+			// 	$.getJSON("{:U('Surveylist/add')}",{suv:suv},function(data){
+			// 		// alert(data)
+			// 	});
+			// }
+		}
+		function del()
+		{
+			if(confirm("是否删除此问卷")){
+				var suv = $("#choosesurvey").val(); 
+				 $.getJSON("{:U('Surveylist/dele')}",{suv:suv},function(data){
+						// alert(data)
+						window.location.reload();
+					});	 
+		}
+			 
+		}
+		function up(radioid,number)
+		{
+			if(number<2)
+			{
+				alert("已经最高不能上移");
+				return false;
+			}
+
+				var suv = "{$nowsurvey.surveyid}"; 
+				 $.getJSON("{:U('Surveylist/up')}",{suv:suv,radioid:radioid,number:number},function(data){
+						// alert(data[1])
+						// alert(data)
+						// alert(data[2])
+						window.location.reload();
+					});	
+		}
+		function down(radioid,number)
+		{
+			var maxid = "{$numberradio}";
+			 
+			if(number>maxid-1)
+			{
+				alert("已经最低不能下移");
+				return false;
+			}
+			 	
+				var suv =  "{$nowsurvey.surveyid}"; 
+				 $.getJSON("{:U('Surveylist/down')}",{suv:suv,radioid:radioid,number:number},function(data){
+						// alert(data)
+						window.location.reload();
+					});	
+		}
+
+		function delradio(data)
+		{
+			if(confirm("是否删除此问题")){
+			var suv = $("#choosesurvey").val(); 
+			 $.getJSON("{:U('Surveylist/delradio')}",{radio:data},function(data){
+					// alert(data)
+					window.location.reload();
+				});	 
+		}
+		}
+	</script>
 </body>
 </html>

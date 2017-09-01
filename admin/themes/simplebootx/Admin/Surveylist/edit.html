@@ -1,0 +1,78 @@
+<admintpl file="header" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/wenjuan_ht.css">
+    <script src="__PUBLIC__/js/add.js"></script>
+
+</head>
+<body>
+	<div class="dx_box" data-t="0" style="display: block;">
+                    <textarea name="" cols="" rows="" class="input_wenbk btwen_text btwen_text_dx" placeholder="单选题目">{$radio.radiotitle}</textarea>
+                    <div class="title_itram">
+
+  <if condition="empty($question) eq true">
+  	 <div class="kzjxx_iteam">
+                            <input name="" type="radio" value="" class="dxk">
+                            <input name="" type="text" class="input_wenbk" value="" placeholder="选项">
+                            <label>
+                                 
+                            </label> <a href="javascript:void(0);" class="del_xm">删除</a>
+                        </div>
+  </if>
+<foreach name="question" item="v">
+	 <div class="kzjxx_iteam">
+                            <input name="" type="radio" value="" class="dxk">
+                            <input name="" type="text" class="input_wenbk" value="{$v.questiontitle}" placeholder="选项">
+                            <label>
+                                 
+                            </label> <a href="javascript:void(0);" class="del_xm">删除</a>
+                        </div>
+</foreach>
+                       
+
+                    </div>
+                    <a href="javascript:void(0)" class="zjxx">增加选项</a>
+                    <!--完成编辑-->
+                    <div class="bjqxwc_box">
+                        <a href="javascript:void(0);" onclick="backs()" class="qxbj_but">取消编辑</a>
+                        <a href="javascript:void(0);" onclick="sub()"  class="qxbj_but"> 完成编辑</a>
+                    </div>
+                </div>
+
+
+		<!-- 	<div class="form-actions">
+				<input type="hidden" name="id" value="{$id}" />
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('SAVE')}</button>
+				<a class="btn" onclick="backs()">{:L('BACK')}</a>
+			</div> -->
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script type="text/javascript">
+		function backs()
+		{
+	 		var index=parent.layer.getFrameIndex(window.name);
+
+			parent.layer.close(index);
+
+		}
+
+ 
+		function sub()
+		{	var radioid = "{$radio.radioid}";
+			var getquestion = $(".dx_box").children("textarea").val(); //编辑题目区
+			  $(".dx_box").children(".title_itram").children('.kzjxx_iteam').each(function(){
+				var question = $(this).children('.input_wenbk').val();
+				
+				$.getJSON("{:U('Surveylist/edit_post')}",{radioid:radioid,question:question},function(data){
+					// alert(data)
+				});
+			});  
+				$.getJSON("{:U('Surveylist/edit_posttitle')}",{radioid:radioid,question:getquestion},function(data){
+					// alert(data)
+			window.parent.location.reload()
+					
+				});	 
+			 // alert(getquestion)
+		}
+	</script>
+</body>
+</html>

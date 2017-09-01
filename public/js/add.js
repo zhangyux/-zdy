@@ -1,89 +1,90 @@
-$(document).ready(function(e) {
-			 $('#addquerstions').change(function() {
-			 	//自己修改
-			 	
 
-		            // debugger
-		            var index = $(this).val(); //选择添加问题的类型
-
-		            if (index == "-1") {
-		                return;
-		            }
-		             if(index == 2){
-		            	if(fill != 0 ){
-		                    		alert("只能填空一次");
-		                    		return;
-		            	}
-		            var movie_box = '<div class="movie_box" style="border: 1px solid rgb(255, 255, 255);"></div>';
-		            	
-		            }else{
-		            var movie_box = '<div class="movie_box" style="border: 1px solid rgb(255, 255, 255);"></div>';
-
-		            }
-		            var Grade = $(".yd_box").find(".movie_box").length + 1;
-		            switch (index) {
-		                case "0": //单选
-		                case "1": //多选
-		                case "2": //问答
-		                    var wjdc_list = '<ul class="wjdc_list"></ul>'; //问答 单选 多选
-		                    var danxuan = "";
-		                    if (index == "0") {
-		                        danxuan = '【单选】';
-		                    } else if (index == "1") {
-		                        danxuan = '【多选】';
-		                    } else if (index == "2") {
-		                        danxuan = '【问答】';
-		                    }
-		                    if(index=="0"){
-		                    wjdc_list = $(wjdc_list).append(' <li><div class="tm_btitlt"><i class="nmb">' + Grade + '</i>. <i class="btwenzi" id="radio'+addradio+'">请编辑问题？</i><span class="tip_wz">' + danxuan + '</span></div></li>');
-		                    $(wjdc_list).append('<input type="hidden" name="" class = "rad" value="radio'+addradio+' "/>');
-		                    addradio++;
-		                    }
-		                    if (index == "2") {
-		                    	if(fill == 0){
-		                    wjdc_list = $(wjdc_list).append(' <li><div class="tm_btitlt"><i class="nmb">' + Grade + '</i>. <i class="btwenzi" id="fill">请编辑问题？</i><span class="tip_wz">' + danxuan + '</span></div></li>');
-
-		                    		wjdc_list = $(wjdc_list).append('<li>  <label> <textarea  name="" cols="" rows="" class="input_wenbk btwen_text btwen_text_dx" ></textarea></label> </li>');
-		                        	fill = 1;
-		                    	}
-		                    	else{
-		                    		alert("只能填空一次");
-		                    	}
-		                        
-		                    }
-		                    movie_box = $(movie_box).append(wjdc_list);
-		                    movie_box = $(movie_box).append('<div class="dx_box" data-t="' + index + '"></div>');
-
-		                    break;
-		                case "3":
-		                    var wjdc_list = ' <div class="wjdc_list"><h4 class="title_wjht"><i class="nmb">' + Grade + '</i>. 请编辑问题!<span class="tip_wz">【矩阵】</span></h4>'
-		                    +' <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tswjdc_table"><tbody></tbody></table></div>'; //问答 单选 多选
-
-		                    movie_box = $(movie_box).append(wjdc_list);
-		                    movie_box = $(movie_box).append('<div class="dx_box" data-t="' + index + '"></div>');
-		                    break;
-
-		            }
+function creates()
+{
+$('#addquerstions').each(function() {
+//自己修改
 
 
+// debugger
+var index = $(this).val(); //选择添加问题的类型
 
-		            $(movie_box).hover(function() {
-		                var html_cz = "<div class='kzqy_czbut'><a href='javascript:void(0)' class='sy'>上移</a><a href='javascript:void(0)'  class='xy'>下移</a><a href='javascript:void(0)'  class='bianji'>编辑</a><a href='javascript:void(0)' class='del' >删除</a></div>"
-		                $(this).css({
-		                    "border": "1px solid #0099ff"
-		                });
-		                $(this).children(".wjdc_list").after(html_cz);
-		            }, function() {
-		                $(this).css({
-		                    "border": "1px solid #fff"
-		                });
-		                $(this).children(".kzqy_czbut").remove();
-		                //$(this).children(".dx_box").hide(); 
-		            });
-		            $(".yd_box").append(movie_box);
+if (index == "-1") {
+return;
+}
+if(index == 2){
+if(fill != 0 ){
+		alert("只能填空一次");
+		return;
+}
+var movie_box = '<div class="movie_box" style="border: 1px solid rgb(255, 255, 255);"></div>';
 
-		        });
-			
+}else{
+var movie_box = '<div class="movie_box" style="border: 1px solid rgb(255, 255, 255);"></div>';
+
+}
+var Grade = $(".yd_box").find(".movie_box").length + 1;
+switch (index) {
+case "0": //单选
+case "1": //多选
+case "2": //问答
+var wjdc_list = '<ul class="wjdc_list"></ul>'; //问答 单选 多选
+var danxuan = "";
+if (index == "0") {
+    danxuan = '【单选】';
+} else if (index == "1") {
+    danxuan = '【多选】';
+} else if (index == "2") {
+    danxuan = '【问答】';
+}
+if(index=="0"){
+wjdc_list = $(wjdc_list).append(' <li><div class="tm_btitlt"><i class="nmb">' + Grade + '</i>. <i class="btwenzi" id="radio'+addradio+'">请编辑问题？</i><span class="tip_wz">' + danxuan + '</span></div></li>');
+$(wjdc_list).append('<input type="hidden" name="" class = "rad" value="radio'+addradio+' "/>');
+addradio++;
+}
+if (index == "2") {
+	if(fill == 0){
+wjdc_list = $(wjdc_list).append(' <li><div class="tm_btitlt"><i class="nmb">' + Grade + '</i>. <i class="btwenzi" id="fill">请编辑问题？</i><span class="tip_wz">' + danxuan + '</span></div></li>');
+
+		wjdc_list = $(wjdc_list).append('<li>  <label> <textarea  name="" cols="" rows="" class="input_wenbk btwen_text btwen_text_dx" ></textarea></label> </li>');
+    	fill = 1;
+	}
+	else{
+		alert("只能填空一次");
+	}
+    
+}
+movie_box = $(movie_box).append(wjdc_list);
+movie_box = $(movie_box).append('<div class="dx_box" data-t="' + index + '"></div>');
+
+break;
+case "3":
+var wjdc_list = ' <div class="wjdc_list"><h4 class="title_wjht"><i class="nmb">' + Grade + '</i>. 请编辑问题!<span class="tip_wz">【矩阵】</span></h4>'
++' <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tswjdc_table"><tbody></tbody></table></div>'; //问答 单选 多选
+
+movie_box = $(movie_box).append(wjdc_list);
+movie_box = $(movie_box).append('<div class="dx_box" data-t="' + index + '"></div>');
+break;
+
+}
+
+
+
+$(movie_box).hover(function() {
+var html_cz = "<div class='kzqy_czbut'><a href='javascript:void(0)' class='sy'>上移</a><a href='javascript:void(0)'  class='xy'>下移</a><a href='javascript:void(0)'  class='bianji'>编辑</a><a href='javascript:void(0)' class='del' >删除</a></div>"
+$(this).css({
+"border": "1px solid #0099ff"
+});
+$(this).children(".wjdc_list").after(html_cz);
+}, function() {
+$(this).css({
+"border": "1px solid #fff"
+});
+$(this).children(".kzqy_czbut").remove();
+//$(this).children(".dx_box").hide(); 
+});
+$(".yd_box").append(movie_box);
+}); }
+	$(document).ready(function(e) {		
 			
 			/*	$(".btwen_text").val("题目");
 				$(".btwen_text_dx").val("单选题目");

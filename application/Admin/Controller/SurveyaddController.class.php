@@ -34,6 +34,7 @@ class SurveyaddController extends AdminbaseController{
 	//问卷调查的题目
 	public function addsurveyradio()
 	{
+		$i = $_REQUEST['i'];
 		$maxid = 0;
 		$surveyid = $_REQUEST['smaxid'];
 		$radioname = $_REQUEST['radioname'];
@@ -48,6 +49,7 @@ class SurveyaddController extends AdminbaseController{
 		$data['radioid'] = $maxid;
 		$data['surveyid'] = $surveyid;
 		$data['radiotitle'] = $radioname;
+		$data['orders'] = $i;
 		$getid = $this->radio_model->add($data);
 
 
@@ -59,6 +61,7 @@ class SurveyaddController extends AdminbaseController{
 	 */
 	public function addsurveyquestion()
 	{	
+		$i = $_REQUEST['i'];
 		$radioid = $_REQUEST['radioid'];
 		$questiontitle = $_REQUEST['questiontitle'];
 		$maxid = 0;
@@ -90,22 +93,22 @@ class SurveyaddController extends AdminbaseController{
 	}
 
 
- 	public function add()
- 	{
+ 	// public function add()
+ 	// {
 
-		$sql = 
-			"CREATE TABLE `survey` (
-			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`name` char(200) DEFAULT NULL COMMENT '章节名称',
-			`contents` text COMMENT '章节文字',
-			`next` int(11) DEFAULT NULL COMMENT '下一章地址',
-			`pid` int(11) DEFAULT NULL COMMENT '小说名称',
-			`novel_url` char(50) DEFAULT NULL COMMENT '小说章节地址',
-			PRIMARY KEY (`id`)
-			) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4";
+		// $sql = 
+		// 	"CREATE TABLE `survey` (
+		// 	`id` int(11) NOT NULL AUTO_INCREMENT,
+		// 	`name` char(200) DEFAULT NULL COMMENT '章节名称',
+		// 	`contents` text COMMENT '章节文字',
+		// 	`next` int(11) DEFAULT NULL COMMENT '下一章地址',
+		// 	`pid` int(11) DEFAULT NULL COMMENT '小说名称',
+		// 	`novel_url` char(50) DEFAULT NULL COMMENT '小说章节地址',
+		// 	PRIMARY KEY (`id`)
+		// 	) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4";
 
-		dump(M()->execute($sql));
- 	}
+		// dump(M()->execute($sql));
+ 	// }
 	
 	
 }

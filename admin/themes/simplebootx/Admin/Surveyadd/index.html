@@ -21,6 +21,8 @@
                 <option value="2">填空</option>
                 <!-- <option value="3">矩阵</option> -->
             </select>
+
+            <button onclick="creates()" class="btn btn-success">增加题目</button>
             <!-- <button id="add">增加问题</button> -->
             <br><br><br><br><br>
             
@@ -128,68 +130,75 @@
     </div>
 </body>
 <script type="text/javascript">
-                var fill = 0;
-                var addradio = 0;
+var fill = 0;
+var addradio = 0;
 
-    $('#sub').click(function() {
-        var title = $("#title").val();
-        if((title==null)||(title==''))
-            {
-                alert("请输入标题");
-                return false;
-            }
+$('#sub').click(function() {
+    var title = $("#title").val();
+    if((title==null)||(title=='')){
+        alert("请输入标题");
+        return false;
+    }
 
-        if(confirm("是否确认发布此问卷调查")){
-
-            $.getJSON("{:U('Surveyadd/getmaxsurveyid')}",function(surveyid){
+    if(confirm("是否确认发布此问卷调查")){
+        var i=0;
+        $.getJSON("{:U('Surveyadd/getmaxsurveyid')}",function(surveyid){
             var smaxid = surveyid;
             // alert(smaxid);
-        
-                // alert(title);
+
+            // alert(title);
             var textareas = $("#fill").html();
-                if(textareas==null){
-                    textareas=0;
-                }
+            if(textareas==null){
+                textareas="请提出您的意见";
+            }
             $.getJSON("{:U('Surveyadd/addsurvey')}", {smaxid:smaxid,textarea:textareas,title:title}, function(surve){
-                 alert(surve);
             });
 
 
-                // alert(a);
+            // alert(a);
             $("#sub").parent(".but").parent(".all_660").children(".yd_box").children(".movie_box").each(function() {
-                  var c =  $(this).children(".wjdc_list").children('.rad').val();
-                  if(c!=null)
-                  {
-                    var radioname = $("#"+c).html();
-                 
-                    $.getJSON("{:U('Surveyadd/addsurveyradio')}", {smaxid:smaxid,radioname:radioname}, function(radioid){
-                       
-                        var radioid = radioid;
-                        $("."+c).each(function(){
+                // alert(2)
+            // // alert();
+            i++
+            var c =  $(this).children(".wjdc_list").children('.rad').val();
+            if(c!=null)
+            {
+                var radioname = $("#"+c).html();
+                    // alert(radioname) ;
 
-                        var questiontitle = $(this).parent("label").children("span").html();   
-                        $.getJSON("{:U('Surveyadd/addsurveyquestion')}", {radioid:radioid,questiontitle:questiontitle}, function(data){
-                            // alert(data);
-                        });
-                    })
-                    });
+                $.getJSON("{:U('Surveyadd/addsurveyradio')}", {smaxid:smaxid,radioname:radioname,i:i}, function(radioid){  
+            //         var radioid = radioid;
+                    $("."+c).each(function(){
 
- 
-                       // $(this).children(".wjdc_list").children("li").each(function() {
-                       //  var rd = $(this).children("label").children("span").html();
-                       //  if(rd!=null){
-                       //      alert(rd);
-                       //      alert(c);
-                       //  }
+                    var questiontitle = $(this).parent("label").children("span").html(); 
+                    // alert(questiontitle)  ;
+                    $.getJSON("{:U('Surveyadd/addsurveyquestion')}", {radioid:radioid,questiontitle:questiontitle}, function(data){
                         
-                       // });
-                       
+                                        });
+            //         })
+                });
 
-                }
+            // // $(this).children(".wjdc_list").children("li").each(function() {
+            // //  var rd = $(this).children("label").children("span").html();
+            // //  if(rd!=null){
+            // //      alert(rd);
+            // //      alert(c);
+            // //  }
+
             });
+
+
+            }
+
             });
-        }
-        
-    });
+        });
+alert("问卷创建成功");
+        // window.location.reload();
+    }
+
+});
+</script>
+<script type="text/javascript">
+   
 </script>
 </html>
